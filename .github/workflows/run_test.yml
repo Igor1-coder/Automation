@@ -5,12 +5,12 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest-latest
+    runs-on: ubuntu-latest
 
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v1
       - name: actions/setup-python@v4
         with:
           pyton-version: "3.12"

@@ -8,7 +8,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 options = Options()
-options.add_argument('--headless') # безголовый реж
 options.add_argument("--window-size=1920x1080") # Запуск браузера с заданным разрешением
 options.add_argument("--disable-blink-features=AutomationControlled") # Отключение средства автоматизации т.е. браузером управляет человек
 # подмена user-agenta

@@ -23,13 +23,31 @@ driver = webdriver.Chrome( service=service)
 # assert checkbox[1].is_selected() == False
 # time.sleep(2)
 
-driver.get("https://demoqa.com/checkbox")
-# Элемент для клика, чтобы выставить флажок
-checkbox = driver.find_element("xpath","//span[@class='rct-checkbox']")
-# Сам чек-бокс для проверки статуса
-checkbox1 = driver.find_element("xpath","//span[@class='rct-node-icon']")
+# driver.get("https://demoqa.com/checkbox")
+# # Элемент для клика, чтобы выставить флажок
+# checkbox = driver.find_element("xpath","//span[@class='rct-checkbox']")
+# # Сам чек-бокс для проверки статуса
+# checkbox1 = driver.find_element("xpath","//span[@class='rct-node-icon']")
+# time.sleep(2)
+#
+# checkbox1.click()
+#
+# time.sleep(2)
+
+
+driver.get("https://demoqa.com/radio-button")
+
+yes_radiobutton = driver.find_element("xpath","//input[@id='yesRadio']")
+tab_radiobutton = driver.find_element("xpath","//label[@for='yesRadio']")
+time.sleep(2)
+tab_radiobutton.click()
+print("Тип данных",driver.find_element("xpath","//label[@for='yesRadio']").is_selected())
+
+
+Impressive_status = driver.find_elements("xpath","//label[@class='custom-control-label']")
+
+Impressive_tab= driver.find_element("xpath","//input[@id='impressiveRadio']")
+Impressive_status[1].click()
+print("Тип данных",driver.find_element("xpath","//input[@id='impressiveRadio']").is_selected())
 time.sleep(2)
 
-checkbox1.click()
-
-time.sleep(2)

@@ -5,8 +5,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-
-
 options = webdriver.ChromeOptions()
 options.add_argument('--headless') # загрузка страницы без интерфейса
 options.add_argument('--incognito') # загрузка страницы в инкогнито
